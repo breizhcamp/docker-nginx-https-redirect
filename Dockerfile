@@ -1,11 +1,11 @@
-FROM            ubuntu:12.04
+FROM            ubuntu:14.04
 MAINTAINER      James Sharp <james@ortootech.com>
+MAINTAINER      team@breizhcamp.org
 
-RUN        echo 'deb http://archive.ubuntu.com/ubuntu precise main universe' > /etc/apt/sources.list
-RUN        apt-get update
+RUN apt-get update
 
 # Install nginx
-RUN        apt-get install -y -q nginx
+RUN apt-get install -y -q nginx
 RUN echo "daemon off;" >> /etc/nginx/nginx.conf
 
 # Expose port 80
